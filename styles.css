@@ -81,7 +81,7 @@ body {
 @media (min-width: 900px) {
   .background {
     /* background-image: url("assets/ini2.webp"); */
-    background-size: cover; /* Contain by height, extend horizontally off the page */
+    background-size: contain; /* Contain by height, extend horizontally off the page */
     background-repeat: no-repeat;
     background-position: top center;
     /* Top of the image at the top of the page */
