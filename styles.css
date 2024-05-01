@@ -27,15 +27,22 @@ body {
 
 .titleContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  font-size: 4vmin;
+  position: absolute;
+  top: 50px;
 }
 
 .indimage {
-  margin-top: 15vmin;
-  width: 50vmin;
+  width: 100%;
+  max-width: 600px;
+}
+
+.subtitle {
+  color: white;
+  text-shadow: -4px 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.5px black; /* Add a black outline */
 }
 
 .footer {
@@ -51,38 +58,27 @@ body {
   height: 80px;
 }
 
-.subtitle {
-  color: white;
-  text-shadow: -4px 1px 0 rgba(0, 0, 0, 0.3);
-  -webkit-text-stroke: 0.5px black; /* Add a black outline */
-}
-
 .gradient-text {
   font-size: 2em; /* Adjust font size as needed */
-  background-image: linear-gradient(
-    0deg,
-    #e21143,
-    #ffb03a,
-    #e21143
-  ); /* Define your gradient colors */
+  background-image: linear-gradient(0deg, #e21143, #ffb03a, #e21143);
   background-clip: text;
-  -webkit-background-clip: text; /* For Safari */
+  -webkit-background-clip: text;
   color: transparent;
   text-shadow: -4px 1px 0 rgba(0, 0, 0, 0.3);
-  -webkit-text-stroke: 0.5px black; /* Add a black outline */
+  -webkit-text-stroke: 0.5px black;
   letter-spacing: 1px;
 }
 
 .background {
   background-image: url("assets/ini2.webp");
-  background-size: contain; /* Optional: Adjust as needed */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  width: 100vw; /* 100% viewport width */
-  height: 100vh; /* 100% viewport height */
+  width: 100vw;
+  height: 100vh;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 900px) {
   .background {
     /* background-image: url("assets/ini2.webp"); */
     background-size: cover; /* Contain by height, extend horizontally off the page */
@@ -91,7 +87,10 @@ body {
     /* Top of the image at the top of the page */
   }
   .indimage {
-    margin-top: 15vmin;
-    width: 50%;
+    width: 80vw;
+  }
+
+  .subtitle {
+    font-size: 35px;
   }
 }
